@@ -47,7 +47,7 @@ const render = () => {
 const renderDone = () => {
     let doneHTML = todoList
       .map((item, index) => {
-        if (item.complete == false) {
+        if (item.complete == false && item.removed==false) {
           return `<div class="item-style">To do:${item.contents} <a onclick="remove(${index})" href="">x</a>  <a onclick="toggleDone(${index})" href="#">Mark Not Done </a></div>`;
         } 
       })
